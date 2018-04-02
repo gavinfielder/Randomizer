@@ -1,1 +1,2 @@
 # Randomizer
+Gavin Fielder: I have implemented a public random number generator using a singleton design pattern. My intent was to use static class members to implement the design pattern. Included a minimal basic test in main.cpp. Currently working on design challenge. 
