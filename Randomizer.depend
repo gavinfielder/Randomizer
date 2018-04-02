@@ -1,12 +1,14 @@
 # depslib dependency file v1.0
-1522697723 source:c:\users\gavin\documents\csci430\randomizer\main.cpp
+1522704233 source:c:\users\gavin\documents\csci430\randomizer\main.cpp
 	<iostream>
 	"Randomizer.h"
 
-1522697642 c:\users\gavin\documents\csci430\randomizer\include\randomizer.h
+1522704320 c:\users\gavin\documents\csci430\randomizer\include\randomizer.h
+	<queue>
 
-1522697714 source:c:\users\gavin\documents\csci430\randomizer\src\randomizer.cpp
+1522703854 source:c:\users\gavin\documents\csci430\randomizer\src\randomizer.cpp
 	"Randomizer.h"
+	<queue>
 	<ctime>
 	<cstdlib>
 

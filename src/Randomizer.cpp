@@ -3,15 +3,15 @@
 #include <ctime>
 #include <cstdlib>
 
-//Initialize static members
+//Initialize/declare static members
 bool Randomizer::seeded = false;
-queue<unsigned int> Randomizer::firstNumbers = new queue();
+std::queue<unsigned int> Randomizer::firstNumbers;
 
 //Constructor which initializes first numbers
-Randomizer::Randomizer(... array<unsigned int^>^ numbers ) {
-    //TODO
-
-
+Randomizer::Randomizer(unsigned int count, unsigned int numbers[]) {
+    if (!(seeded)) //only allowed before first call
+        for (unsigned int i = 0; i < count; i++)
+            firstNumbers.push(numbers[i]);
 }
 
 //returns a random number between minimum and maximum
@@ -24,7 +24,7 @@ unsigned int Randomizer::randomBetween
     }
     //If firstNumbers nonempty, return the first entry and then remove it.
     if (!(firstNumbers.empty())) {
-        unsigned int toReturn = firstNumbers.first();
+        unsigned int toReturn = firstNumbers.front();
         firstNumbers.pop();
         return toReturn;
     }
