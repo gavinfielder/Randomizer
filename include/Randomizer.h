@@ -9,15 +9,20 @@ using namespace std;
 class Randomizer
 {
     public:
+        //Default constructor
+        Randomizer() {}
         //Constructor that initializes firstNumbers as test values
         Randomizer(unsigned int count, unsigned int numbers[]);
         //Generates a random number between min and max
-        static unsigned int randomBetween
+        unsigned int randomBetween
             (unsigned int minimum, unsigned int maximum);
+        //Enables public read access to the single instance
+        static Randomizer& GetInstance() { return *sInstance; }
 
     private:
-        static bool seeded; //Tracks whether generator is seeded
-        static queue<unsigned int> firstNumbers; //Holds test values
+        unsigned int generateRandom(unsigned int min, unsigned int max);
+        static Randomizer* sInstance; //singleton reference
+        queue<unsigned int> firstNumbers; //Holds test values
 };
 
 #endif // RANDOMIZER_H
